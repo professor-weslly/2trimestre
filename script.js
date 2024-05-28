@@ -41,3 +41,13 @@ const perguntas = [
                 ]
     },  
 ];
+
+let atual =0;
+let pergunta.Atual;
+
+function mostraPergunta(){
+    perguntaAtual = perguntas[atual]
+    caixaPerguntas.textContent = perguntaAtual.enunciado
+}
+
+mostraPergunta();
