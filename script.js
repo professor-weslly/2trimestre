@@ -6,38 +6,38 @@ const caixaResultado=document.querySelector(".caixa-resultado")
 
 const perguntas = [
     {
-        enunciado:"pergunta 1",
+        enunciado:"tiago é burro?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "Sim",
+            "Sim, claro",
                 ]
     },
     {
-        enunciado:"pergunta 2",
+        enunciado:"complete: tiago jose?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "De freitas",
+            "Tuponi",
                 ]
     },
     {
-        enunciado:"pergunta 3",
+        enunciado:"cachorro ou gato?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "canino maluco",
+            "felino insano",
                 ]
     },
     {
-        enunciado:"pergunta 4",
+        enunciado:"quem vocÊw prefe.re",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "kauan xotarovski",
+            "tiago jose ______",
                 ]
     },
     {
-        enunciado:"pergunta 5",
+        enunciado:"existe pos vida?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "sim",
+            "naum",
                 ]
     },  
 ];
