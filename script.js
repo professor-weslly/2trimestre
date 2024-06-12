@@ -8,36 +8,58 @@ const perguntas = [
     {
         enunciado:"tiago é burro?",
         alternativas:[
+            {
             "Sim",
+
+
+            },
+            {
             "Sim, claro",
+            },
                 ]
     },
     {
         enunciado:"complete: tiago jose?",
         alternativas:[
+            {
             "De freitas",
+            },
+            {
             "Tuponi",
+            },
                 ]
     },
     {
         enunciado:"cachorro ou gato?",
         alternativas:[
+            {
             "canino maluco",
+            },
+            {
             "felino insano",
+            },
                 ]
     },
     {
         enunciado:"quem vocÊw prefe.re",
         alternativas:[
-            "kauan xotarovski",
+            {
+            "kauan srovski",
+            },
+            {
             "tiago jose ______",
+            },
                 ]
     },
     {
-        enunciado:"existe pos vida?",
+        enunciado:"tigrinhe monetary cassino onliene?",
         alternativas:[
+            {
             "sim",
+            },
+            {
             "naum",
+            },
                 ]
     },  
 ];
