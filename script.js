@@ -80,3 +80,12 @@ function mostraAlternativas(){
     botaoAlternativas.textContent = alternativa;
     caixaAlternativas.appendChild(botaoAlternativas);
 }
+
+let historiafinal ="";
+
+function respostaselecionadas(oppcaoSelecionadas){
+    const afirmacoes = oppcaoSelecionadas.afirmacoes;
+    historiafinal = afirmacoes;
+    atual++;
+    mostraPergunta;
+}
