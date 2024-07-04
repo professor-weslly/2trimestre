@@ -6,86 +6,107 @@ const caixaResultado=document.querySelector(".caixa-resultado")
 
 const perguntas = [
     {
-        enunciado:"tiago é burro?",
-        alternativas:[
+        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        alternativas: [
             {
-            "Sim",
-
-
+                texto: "Isso é assustador!",
+                afirmacao: "afirmação"
             },
             {
-            "Sim, claro",
-            },
-                ]
+                texto: "Isso é maravilhoso!",
+                afirmacao: "afirmação"
+            }
+        ]
     },
     {
-        enunciado:"complete: tiago jose?",
-        alternativas:[
+        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        alternativas: [
             {
-            "De freitas",
+                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+                afirmacao: "afirmação"
             },
             {
-            "Tuponi",
-            },
-                ]
+                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+                afirmacao: "afirmação"
+            }
+        ]
     },
     {
-        enunciado:"cachorro ou gato?",
-        alternativas:[
+        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        alternativas: [
             {
-            "canino maluco",
+                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
+                afirmacao: "afirmação"
             },
             {
-            "felino insano",
-            },
-                ]
+                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                afirmacao: "afirmação"
+            }
+        ]
     },
     {
-        enunciado:"quem vocÊw prefe.re",
-        alternativas:[
+        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        alternativas: [
             {
-            "kauan srovski",
+                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
+                afirmacao: "afirmação"
             },
             {
-            "tiago jose ______",
-            },
-                ]
+                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
+                afirmacao: "afirmação"
+            }
+        ]
     },
     {
-        enunciado:"tigrinhe monetary cassino onliene?",
-        alternativas:[
+        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        alternativas: [
             {
-            "sim",
+                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
+                afirmacao: "afirmação"
             },
             {
-            "naum",
-            },
-                ]
-    },  
+                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
+                afirmacao: "afirmação"
+            }
+        ]
+    },
 ];
 
-let atual =0;
-let pergunta.Atual;
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = ""; 
 
-function mostraPergunta(){
-    perguntaAtual = perguntas[atual]
-    caixaPerguntas.textContent = perguntaAtual.enunciado
+function mostraPergunta() {
+ /*    if(atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }   */ 
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+ /* caixaAlternativas.textContent = ""; */
     mostraAlternativas();
 }
+function mostraAlternativas() {
+    for(const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
+}
 
+function respostaSelecionada(opcaoSelecionada){
+            const afirmacoes = opcaoSelecionada.afirmacao; /* mudar para opcaoSelecionada.afirmacao*/
+            historiaFinal = afirmacoes; /* += afirmacoes + " "; */
+            atual++;
+            mostraPergunta();
+      }
+/*
+function mostraResultado(){
+    caixaPerguntas.textContent = "Em 2049..."
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent ="";
+}
+*/
 mostraPergunta();
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas)
-    const botaoAlternativas = document.createElement("button");
-    botaoAlternativas.textContent = alternativa;
-    caixaAlternativas.appendChild(botaoAlternativas);
-}
 
-let historiafinal ="";
-
-function respostaselecionadas(oppcaoSelecionadas){
-    const afirmacoes = oppcaoSelecionadas.afirmacoes;
-    historiafinal = afirmacoes;
-    atual++;
-    mostraPergunta;
-}
