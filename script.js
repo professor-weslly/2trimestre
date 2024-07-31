@@ -2,7 +2,7 @@ const caixaPrincipal=document.querySelector(".caixa-principal")
 const caixaPerguntas=document.querySelector(".caixa-perguntas")
 const caixaAlternativas=document.querySelector(".caixa-alternativas")
 const caixaResultado=document.querySelector(".caixa-resultado")
-const caixaResultado=document.querySelector(".caixa-resultado")
+const caixaResultado=document.querySelector(".texto-resultado")
 
 const perguntas = [
     {
@@ -96,14 +96,14 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada){
-            const afirmacoes = opcaoSelecionada.afirmacao; /* mudar para opcaoSelecionada.afirmacao*/
+            const afirmacoes = opcaoSelecionada.afirmação; /* mudar para opcaoSelecionada.afirmacao*/
             historiaFinal += afirmacoes + " ";
             atual++;
             mostraPergunta();
       }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = ""
+    caixaPerguntas.textContent = "PARECE QUE VOCÊ"
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent ="";
 }
